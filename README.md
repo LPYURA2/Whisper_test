@@ -13,10 +13,11 @@ branch → main → /(root), затем проверить реальную за
 
 ## Настройка Worker
 
-В `network/stand-config.js` указывается фактический WSS URL нового Cloudflare Worker,
-например путь `/ws` у полученного от Cloudflare HTTPS endpoint. Subdomain не
-угадывается. До настройки строка пуста и приложение не подключается к production
-Render. Клиент при этом позволяет создать тестовый профиль и скопировать его ID.
+В `network/stand-config.js` указан фактический адрес из успешного Cloudflare deploy:
+`wss://whisper-signaling-package-test.vovakrech20.workers.dev/ws`.
+Production Render не используется как fallback. Успешный deploy не доказывает
+публичный signaling-ready: отдельно требуется настроить допуск двух тестовых ID.
+Проверка /health из среды разработки блокируется proxy403 до ответа Worker.
 
 Серверный репозиторий: LPYURA2/whisper-signaling-test. Worker:
 `whisper-signaling-package-test`; команда публикации `npm run cf:deploy`.

@@ -1,9 +1,9 @@
 {
   "sourceCommit": "942c058e0448738a75733057a59663b4dd305544",
   "build": "whisper-package-stand-r1",
-  "workerURLConfigured": false,
+  "workerURLConfigured": true,
   "workerName": "whisper-signaling-package-test",
-  "workerHost": "UNKNOWN until owner deploys Cloudflare",
+  "workerHost": "whisper-signaling-package-test.vovakrech20.workers.dev",
   "runtimeAllowlist": "two owner-generated test profile IDs; not stored here",
   "namespace": "whisper-test:Whisper_test:package-r1:",
   "tests": {
@@ -13,7 +13,9 @@
     "realLocalWebSocket": true,
     "WebRTC": "model",
     "publicCloudflareWSS": "NOT RUN",
-    "Android": "NOT RUN"
+    "Android": "NOT RUN",
+    "currentEndpointChange": "22 JS syntax PASS; protected accepted network modules unchanged; prior independent 59 checks not rerun for URL-only update",
+    "publicCloudflareHealth": "BLOCKED: proxy403 before Worker response"
   },
   "files": [
     {
@@ -28,8 +30,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 5467,
-      "sha256": "919b15c3babc16504a9afba71db54095cda5f7acc8a500872a9ae069aa7a824d"
+      "bytes": 5522,
+      "sha256": "d6a90a068894bc5d31e6502e89b400130fe0b52da87fc2d55a2463e79d3648f0"
     },
     {
       "file": "chats/chat-manager.js",
@@ -108,8 +110,8 @@
     },
     {
       "file": "network/stand-config.js",
-      "bytes": 280,
-      "sha256": "52d9bab1e39112fe74b042b84058e0b2a5fd634e78005316e8410ed5bdaf7508"
+      "bytes": 319,
+      "sha256": "099c7189276d327d921c880cb636e90cfe68b70e9ee34bc0836886f51bcf6881"
     },
     {
       "file": "network/turn-poc-build.js",
@@ -166,5 +168,7 @@
       "bytes": 15457,
       "sha256": "737db0e0d2561a0454e360a422ed5a990cd5ae9ca0bdaae3704a8f29c6ae64ec"
     }
-  ]
+  ],
+  "workerWebSocketURL": "wss://whisper-signaling-package-test.vovakrech20.workers.dev/ws",
+  "workerDeploymentEvidence": "Owner Cloudflare screenshot: deploy success, version 9e24b926-2acc-4a07-abf4-e886a636e320"
 }
